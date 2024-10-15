@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+
+  <!-- Device -->
+  <remove-project name="device/qcom/common" />
+  <project path="device/qcom/common" name="android_device_qcom_common" remote="nos-ssh" >
+    <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
+  </project>
+
+  <!-- <project path="system/libufdt" name="platform/system/libufdt" revision="aosp-new/main" remote="clo-la" /> -->
+
+</manifest>
