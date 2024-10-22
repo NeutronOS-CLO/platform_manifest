@@ -43,12 +43,16 @@
   <remove-project name="platform/vendor/qcom/opensource/datarmnet-ext" />
   <remove-project name="platform/vendor/qcom/opensource/securemsm-kernel" />
   <remove-project name="platform/vendor/qcom-opensource/bt-kernel" />
+  <remove-project name="platform/vendor/qcom-opensource/bluetooth_ext" />
   <remove-project name="platform/vendor/qcom-opensource/location" />
   <remove-project name="platform/vendor/qcom-opensource/wigig" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/fw-api" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/qca-wifi-host-cmn" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/qcacld-3.0" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/platform" />
+  <remove-project name="platform/vendor/qcom-opensource/cryptfs_hw" />
+  <remove-project name="platform/vendor/qcom-opensource/fm-commonsys" />
+  <remove-project name="platform/vendor/qcom-opensource/system/bt" />
 
   <!-- Prebuilts -->
   <remove-project name="kernel/prebuilts/4.19/arm64"/>
@@ -82,6 +86,7 @@
   <remove-project name="platform/vendor/nxp/opensource/halimpl" />
   <remove-project name="platform/vendor/nxp/opensource/hidlimpl" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/utils/sigma-dut" />
+  <remove-project name="platform/vendor/qcom-opensource/packages/apps/Bluetooth" />
   <remove-project name="platform/vendor/qcom/kalama" />
   <remove-project name="platform/vendor/qcom/lahaina" />
   <remove-project name="platform/vendor/qcom/taro" />
