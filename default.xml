@@ -32,10 +32,6 @@
           fetch="git@github.com:NeutronOS-CLO/"
           revision="vite" />
 
-  <remote name="nos-gitlab"
-          fetch="https://gitlab.com/NeutronOS-CLO/"
-          revision="vite" />
-
   <!-- NeutronOS -->
   <include name="neutronos.xml"/>
   <include name="obsolete.xml"/>

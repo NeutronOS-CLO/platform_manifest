@@ -1,12 +1,73 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
+  <!-- Build -->
+  <remove-project name="platform/build_repo" />
+  <project path="build/make" name="platform_build" remote="nos" >
+    <linkfile src="CleanSpec.mk" dest="build/CleanSpec.mk" />
+    <linkfile src="buildspec.mk.default" dest="build/buildspec.mk.default" />
+    <linkfile src="core" dest="build/core" />
+    <linkfile src="envsetup.sh" dest="build/envsetup.sh" />
+    <linkfile src="target" dest="build/target" />
+    <linkfile src="tools" dest="build/tools" />
+  </project>
+  <remove-project name="platform/build/soong" />
+  <project path="build/soong" name="platform_build_soong" remote="nos" >
+    <linkfile src="root.bp" dest="Android.bp" />
+    <linkfile src="bootstrap.bash" dest="bootstrap.bash" />
+  </project>
+  
   <!-- Device -->
   <remove-project name="device/qcom/common" />
-  <project path="device/qcom/common" name="android_device_qcom_common" remote="nos-ssh" >
+  <project path="device/qcom/common" name="platform_device_qcom_common" remote="nos" >
     <linkfile dest="vendor/qcom/build/tasks/generate_extra_images.mk" src="generate_extra_images.mk"/>
   </project>
 
-  <!-- <project path="system/libufdt" name="platform/system/libufdt" revision="aosp-new/main" remote="clo-la" /> -->
+  <!-- Frameworks -->
+  <remove-project name="platform/frameworks/base" />
+  <project path="frameworks/base" name="platform_frameworks_base" remote="nos" />
+
+  <!-- Lineage -->
+  <project path="hardware/neutron/compat" name="platform_hardware_neutron_compat" remote="nos" />
+
+  <!-- External -->
+  <remove-project name="platform/external/e2fsprogs" />
+  <project path="external/e2fsprogs" name="platform_external_e2fsprogs" remote="nos" />
+  <remove-project name="platform/external/fastrpc" />
+  <project path="external/fastrpc" name="platform_external_fastrpc" remote="nos" />
+  <remove-project name="platform/external/tinycompress" />
+  <project path="external/tinycompress" name="platform_external_tinycompress" remote="nos" />
+  <remove-project name="platform/external/json-c" />
+  <project path="external/json-c" name="platform_external_json-c" remote="nos" />
+
+  <!-- Kernel -->
+  <remove-project name="kernel/configs" />
+  <project path="kernel/configs" name="platform_kernel_configs" remote="nos" />
+  <project path="device/qcom/kernelscripts" name="platform_device_qcom_kernelscripts" remote="nos" >
+    <linkfile dest="vendor/qcom/build/tasks/kernel_definitions.mk" src="kernel_definitions.mk"/>
+  </project>
+
+  <!-- Core -->
+  <remove-project name="platform/system/vold" />
+  <project path="system/vold" name="platform_system_vold" remote="nos" />
+
+  <!-- Proprietary vendors -->
+  <project path="vendor/qcom/common" name="proprietary_vendor_qcom_common" remote="nos" />
+  <project path="vendor/qcom/sdclang" name="proprietary_vendor_qcom_sdclang" remote="nos" />
+
+  <!-- NeutronOS vendor -->
+  <project path="vendor/neutron" name="platform_vendor_neutron" remote="nos" />
+
+  <!-- Bootable -->
+  <remove-project name="platform/bootable/recovery" />
+  <project path="bootable/recovery" name="platform_bootable_recovery" remote="nos" />
+
+  <!-- Qualcomm vendor -->
+  <project path="vendor/qcom/opensource/data-ipa-cfg-mgr-legacy" name="platform_vendor_qcom-opensource_data-ipa-cfg-mgr-legacy" remote="nos" revision="vite-legacy" />
+  <remove-project name="platform/vendor/qcom-opensource/dataservices" />
+  <project path="vendor/qcom/opensource/dataservices" name="platform_vendor_qcom-opensource_dataservices" remote="nos" />
+  <remove-project name="platform/vendor/qcom-opensource/power" />
+  <project path="vendor/qcom/opensource/power" name="platform_vendor_qcom-opensource_power" remote="nos" />
+  <project path="vendor/qcom/opensource/commonsys-intf/wfd" name="platform_vendor_qcom-opensource_commonsys-intf_wfd" remote="nos" />
 
 </manifest>

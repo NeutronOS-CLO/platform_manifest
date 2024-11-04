@@ -43,7 +43,6 @@
   <remove-project name="platform/vendor/qcom/opensource/datarmnet-ext" />
   <remove-project name="platform/vendor/qcom/opensource/securemsm-kernel" />
   <remove-project name="platform/vendor/qcom-opensource/bt-kernel" />
-  <remove-project name="platform/vendor/qcom-opensource/bluetooth_ext" />
   <remove-project name="platform/vendor/qcom-opensource/location" />
   <remove-project name="platform/vendor/qcom-opensource/wigig" />
   <remove-project name="platform/vendor/qcom-opensource/wlan/fw-api" />
@@ -52,7 +51,6 @@
   <remove-project name="platform/vendor/qcom-opensource/wlan/platform" />
   <remove-project name="platform/vendor/qcom-opensource/cryptfs_hw" />
   <remove-project name="platform/vendor/qcom-opensource/fm-commonsys" />
-  <remove-project name="platform/vendor/qcom-opensource/system/bt" />
 
   <!-- Prebuilts -->
   <remove-project name="kernel/prebuilts/4.19/arm64"/>
